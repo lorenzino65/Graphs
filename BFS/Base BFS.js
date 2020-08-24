@@ -16,7 +16,7 @@ function solve(s){
     let visited = new Array(n).fill(false)
     visited[s]=true
 
-    let prev = new Array(n).fill(null) //or map
+    let prev = new Array(n).fill(null) //or map   it takes the history of the previous block
     while(!_.isEmpty(q)){
         node = q.shift()
         let neighbours = g.get(node)
