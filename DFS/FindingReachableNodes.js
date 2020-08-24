@@ -24,7 +24,7 @@ g.set(14,[0,8,13])
 g.set(15,[2,9,10])
 g.set(16,[5])
 g.set(17,[5])
-console.log(g)
+
 function findComponent (){
     for(let i =0; i<n;i++){
         if (!visited[i]){
