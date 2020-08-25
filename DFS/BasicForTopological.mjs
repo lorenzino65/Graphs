@@ -1,13 +1,16 @@
 'use strict'
 
-export default function dfs (at,visited,order,g,id){
-    if (visited[at]) return; //controls if visited or not, returns if alredy seen
+export default function dfs (key,visited,order,g,id){
+    let at = id.get(key[0])
+    if (visited[at]) return order; //controls if visited or not, returns if alredy seen
     visited[at]=true
-    let neighbours = g.get(id.get(at))
+    let neighbours = g.get(key[0])
     //goes to check every neighbour
+    
     neighbours.forEach(element => {     
-        return dfs(element[0],visited,order,g,id)        
+        return dfs(element,visited,order,g,id)        
     });
-    order.unshift(at)
+    
+    order.unshift(key[0])
     return order
 }
