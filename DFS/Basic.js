@@ -1,8 +1,8 @@
 'use strict'
 
-let n, //number of nodes    
-    g, //adjacency list
-    visited=[false,...false]; //size n, array of True or False
+// let n, //number of nodes    
+//     g, //adjacency list
+//     visited=[false,...false]; //size n, array of True or False
 
 
 function dfs (at,n,order,g){
@@ -17,8 +17,6 @@ function dfs (at,n,order,g){
     return order
 }
 
-let start = 0
-let order = dfs(start,n,[],g)
 
 
-export {dfs}
+
